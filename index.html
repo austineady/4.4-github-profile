@@ -8,13 +8,88 @@
     <title></title>
 
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/styles/main.css">
 
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
+  <section class="content">
+  <header>
+    <input type="text" class="searchbar" value="Search GitHub">
+    <span class="menutext">Explore</span>
+    <span class="menutext">Gist</span>
+    <span class="menutext">Blog</span>
+    <span class="menutext">Help</span>
+    <img src="" class="userimage">
+    <span class="username"></span>
+    <div class="menuicons"></div>
+    <div class="menuicons"></div>
+    <div class="menuicons"></div>
+    <div class="menuicons"></div>
+    <button name="login" class="login">Log In</button>
+  </header>
+  <section class="sidebar">
+    <img src="" class="profileimage">
+    <h1 class="profilename">Austin Eady</h1>
+    <h2 class="profileusername">austineady</h2>
+    <div class="sideline"></div>
+    <div class="profileinfo">
+      <i class="fa fa-map-marker"></i><span class="country">United States</span>
+      <i class="fa fa-envelope"></i><span class="email">austineady@gmail.com</span>
+      <i class="fa fa-clock-o"></i><span class="joindate">Joined on Jan 16, 2015</span>
+    </div>
+    <div class="sideline"></div>
+    <div class="socialcontain">
+      <div class="follower socialbox">
+        <span class="followersocialnumber">0</span>
+        <span class="followersocialtext">Followers</span>
+      </div>
+      <div class="starred socialbox">
+        <span class="starredsocialnumber">0</span>
+        <span class="starredsocialtext">Starred</span>
+      </div>
+      <div class="following socialbox">
+        <span class="followingsocialnumber">0</span>
+        <span class="followingsocialtext">Following</span>
+      </div>
+    </div>
+      <div class="sideline"></div>
+      <h2 class="organizations">Organizations</h2>
+      <img src="https://avatars0.githubusercontent.com/u/11824325?v=3&s=84" class="organizepic">
+  </section>
+  <section class="maincontent">
+    <div class="mainline"></div>
+    <section class="repoheader">
+      <input type="text" class="findarepo" value="Find a repository...">
+      <button class="searchbutt">Search</button>
+      <span class="repomenu all">All</span>
+      <span class="repomenu public">Public</span>
+      <span class="repomenu private">Private</span>
+      <span class="repomenu">Sources</span>
+      <span class="repomenu forks">Forks</span>
+      <span class="repomenu">Mirrors</span>
+      <button class="newrepo">New</button>
+    </section>
+    <div class="mainline"></div>
+    <section class="repobox">
+      <li class="repo">
+        <div class="titlebox">
+          <h3 class="repotitle">cool-scaffolding</h3>
+          <span class="forktext">forked from jacobthemyth/cool-scaffolding</span>
+          <span class="update">Updated an hour ago</span>
+        </div>
+        <div class="languagebox">
+          <span class="repolanguage">Javascript</span>
+          <span class="starredinfo">0</span>
+          <span class="forkinfo">2</span>
+        </div>
+      </li>
+    </section>
+  </section>
 
+
+  </section>
   <!-- Third Party Scripts -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
@@ -22,6 +97,7 @@
 
   <!-- Application Scripts -->
   <script src="dist/scripts/templates.js"></script>
+  <script src="scripts/token.js"></script>
   <script src="scripts/main.js"></script>
 
 </body>

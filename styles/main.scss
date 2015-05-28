@@ -14,8 +14,287 @@ $very-light-gray: #fafafa;
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
 
+/* * {
+  border: 1px solid red;
+} */
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: 0;
+}
+
 body {
   font-family: $base-font-family;
   background-color: $base-background-color;
   color: $base-font-color;
+}
+
+.content {
+  @include outer-container(100%);
+}
+
+header {
+  @include span-columns(12);
+  height: 60px;
+  background-color: rgba(245, 245, 245, 1);
+  border-bottom: 1px solid silver;
+  line-height: 50px;
+}
+
+.searchbar {
+  @include span-columns(4);
+  @include shift(2);
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
+.menutext {
+  @include span-columns(.7);
+  margin-left: 5px;
+}
+
+.login {
+  @include span-columns(1);
+  height: 40px;
+  line-height: 30px;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.userimage {
+  @include span-columns(.6);
+  @include omega();
+  margin-top: 10px;
+  margin-right: 5px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.username {
+  @include span-columns(1);
+}
+
+.sidebar {
+  @include span-columns(3);
+  @include shift(1);
+  margin-top: 20px;
+}
+
+.profileimage {
+  @include span-columns(12);
+  border-radius: 5px;
+}
+
+.profilename {
+  margin-bottom: 0px;
+}
+
+.profileusername {
+  margin-top: 0px;
+  color: silver;
+}
+
+.sideline {
+  @include span-columns(12);
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+span > i {
+  color: rgba(204, 204, 204, 1);
+  margin-right: 5px;
+}
+
+.fa-map-marker {
+  font-size: 20px;
+  margin-left: 2px;
+  margin-right: 7px;
+}
+
+.fa-clock-o {
+  margin-left: 2px;
+}
+
+.country {
+  @include span-columns(12);
+  margin-bottom: 5px;
+}
+
+.email {
+  @include span-columns(12);
+  margin-bottom: 5px;
+}
+
+.joindate {
+  @include span-columns(12);
+  margin-bottom: 5px;
+}
+
+.socialcontain {
+  @include span-columns(12);
+  height: auto;
+}
+
+.socialbox {
+  @include span-columns(3.5);
+  height: 50px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.followersocialnumber {
+  @include span-columns(12);
+  font-size: 30px;
+  color: rgba(66, 132, 191, 1);
+  font-weight: bold;
+}
+
+.starredsocialnumber {
+  @include span-columns(12);
+  font-size: 30px;
+  color: rgba(66, 132, 191, 1);
+  font-weight: bold;
+}
+
+.followingsocialnumber {
+  @include span-columns(12);
+  font-size: 30px;
+  color: rgba(66, 132, 191, 1);
+  font-weight: bold;
+}
+
+.socialtext {
+  @include span-columns(12);
+  font-size: 11px;
+}
+
+.organizations {
+  font-size: 20px;
+}
+
+.organizepic {
+  @include span-columns(3);
+  border-radius: 5px;
+}
+
+.maincontent {
+  @include span-columns(7.5);
+  margin-top: 20px;
+}
+
+.mainline {
+  @include span-columns(12);
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.repoheader {
+  @include span-columns(12);
+}
+
+.findarepo {
+  @include span-columns(4);
+  @include omega();
+  margin-right: 5px;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.searchbutt {
+  @include span-columns(1.5);
+  @include omega();
+  height: 35px;
+  border-radius: 5px;
+}
+
+.repomenu {
+  @include span-columns(1.2);
+  @include omega();
+  margin-top: 10px;
+  margin-left: 10px;
+  color: rgba(65, 131, 196, 1);
+}
+
+.all {
+  @include span-columns(.5);
+  @include omega();
+  margin-right: 10px;
+}
+
+.forks {
+  @include span-columns(1);
+  @include omega();
+}
+
+.public {
+  @include span-columns(1);
+  @include omega();
+  margin-left: 5px;
+}
+
+.private {
+  @include span-columns(1);
+  @include omega();
+}
+
+.newrepo {
+  @include span-columns(1.5);
+  @include omega();
+  margin-left: 5px;
+  border-radius: 5px;
+  height: 35px;
+  background-color: rgba(134, 217, 106, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.repobox {
+  @include span-columns(12);
+  height: auto;
+}
+
+.repo {
+  @include span-columns(12);
+  margin-top: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  padding-bottom: 10px;
+}
+
+.titlebox {
+  @include span-columns(8 of 12);
+}
+
+.repotitle {
+  @include span-columns(12);
+  color: rgba(66, 132, 191, 1);
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.forktext {
+  @include span-columns(12);
+  margin-bottom: 10px;
+}
+
+.update {
+  @include span-columns(12);
+}
+
+.languagebox {
+  @include span-columns(4 of 12);
+}
+
+.repolanguage {
+  @include shift(4 of 12);
+  margin-top: 10px;
 }
