@@ -48,16 +48,133 @@ header {
   line-height: 50px;
 }
 
+.fa-github {
+  @include span-columns(.75);
+  @include shift(1.5);
+  @include omega();
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 50px;
+}
+
+.pooholder {
+  @include span-columns(1);
+  @include shift(1);
+  height: 60px;
+  background-color: black;
+}
+
+.pooimage {
+  @include span-columns(1);
+}
+
+.giticon {
+  color: black;
+}
+
+.fa-github:hover {
+  color: rgba(67, 133, 186, 1);
+}
+
+.searchcontain {
+  @include span-columns(3.5);
+  margin-top: 5px;
+}
+
 .searchbar {
-  @include span-columns(4);
-  @include shift(2);
-  margin-top: 20px;
+  @include span-columns(12);
+  margin-top: 10px;
   border-radius: 3px;
+  color: rgba(169, 169, 188, 1);
+  height: 30px;
+  font-size: 15px;
+  padding: 5px;
+  border: 1px solid silver;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, .1);
 }
 
 .menutext {
   @include span-columns(.7);
+  line-height: 60px;
   margin-left: 5px;
+}
+
+.menulink {
+  color: black;
+}
+
+.menulink:hover {
+  color: rgba(67, 133, 186, 1);
+}
+
+.gist {
+  @include span-columns(.5);
+}
+
+.blog {
+  @include span-columns(.5);
+}
+
+.menuicons {
+  @include span-columns(.5);
+  @include omega();
+  margin-right: 10px;
+  font-size: 20px;
+  line-height: 60px;
+}
+
+.menuicons:hover {
+  color: rgba(67, 133, 186, 1);
+}
+
+.plus {
+  @include span-columns(.6);
+  @include omega();
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+.plus:hover~.plushover {
+  visibility: visible;
+}
+
+.inbox:hover~.inboxhover {
+  visibility: visible;
+}
+
+.hovertext {
+  position: absolute;
+  visibility: hidden;
+  width: auto;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, .8);
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  height: 35px;
+  line-height: 30px;
+  border-radius: 3px;
+}
+
+.plushover {
+  right: 190px;
+}
+
+.inboxhover {
+  right: 100px;
+}
+
+.octicon {
+  font-size: 20px;
+}
+
+.octicon-triangle-down {
+  margin-left: 3px;
+  font-size: 15px;
+}
+
+.octicon-sign-out {
+  font-size: 18px;
 }
 
 .login {
@@ -66,13 +183,14 @@ header {
   line-height: 30px;
   border-radius: 5px;
   margin-top: 5px;
-  background-color: rgba(0, 0, 0, .1);
+  background: -webkit-linear-gradient(rgba(251, 251, 251, 1), rgba(238, 238, 238, 1));
+  border: 1px solid rgba(221, 221, 221, 1);
 }
 
 .userimage {
-  @include span-columns(.6);
+  @include span-columns(.55);
   @include omega();
-  margin-top: 10px;
+  margin-top: 15px;
   margin-right: 5px;
   height: 30px;
   border-radius: 3px;
@@ -80,6 +198,18 @@ header {
 
 .username {
   @include span-columns(1);
+  @include omega();
+  margin-right: 10px;
+  line-height: 60px;
+}
+
+.loginurl {
+  color: black;
+  margin-right: 10px;
+}
+
+.loginurl:hover {
+  color: rgba(67, 133, 186, 1);
 }
 
 .sidebar {
@@ -98,8 +228,9 @@ header {
 }
 
 .profileusername {
+  font-weight: 300;
   margin-top: 0px;
-  color: silver;
+  color: rgba(102, 102, 102, 1);
 }
 
 .sideline {
@@ -127,6 +258,14 @@ span > i {
 .country {
   @include span-columns(12);
   margin-bottom: 5px;
+}
+
+.emaillink {
+  color: rgba(67, 133, 186, 1);
+}
+
+.emaillink:hover {
+  text-decoration: underline;
 }
 
 .email {
@@ -177,6 +316,15 @@ span > i {
   font-size: 11px;
 }
 
+.sociallink {
+  color: rgba(153, 153, 153, 1);
+  font-weight: 300;
+}
+
+.sociallink:hover {
+  color: rgba(67, 133, 186, 1);
+}
+
 .organizations {
   font-size: 20px;
 }
@@ -191,15 +339,63 @@ span > i {
   margin-top: 20px;
 }
 
-.mainline {
+.tabcontain {
   @include span-columns(12);
-  border: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(221, 221, 221, 1);
   margin-bottom: 10px;
-  margin-top: 10px;
 }
+
+.tabhead {
+  @include span-columns(2.4);
+  @include omega();
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(250, 250, 250, 1);
+}
+
+.tabhead:hover {
+  border-top: 1px solid rgba(221, 221, 221, 1);
+  border-right: 1px solid rgba(221, 221, 221, 1);
+  border-left: 1px solid rgba(221, 221, 221, 1);
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 1);
+}
+
+.repositories {
+  border-top: 1px solid rgba(221, 221, 221, 1);
+  border-right: 1px solid rgba(221, 221, 221, 1);
+  border-left: 1px solid rgba(221, 221, 221, 1);
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 1);
+}
+
+.octicon-diff-added {
+  margin-right: 5px;
+}
+
+.octicon-rss {
+  margin-right: 5px;
+}
+
+.octicon-pencil {
+  margin-right: 5px;
+}
+
+.edit {
+  @include span-columns(2.1);
+  float: right;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(rgba(251, 251, 251, 1), rgba(238, 238, 238, 1));
+  border: 1px solid rgba(221, 221, 221, 1);
+  margin-top: 5px;
+}
+
 
 .repoheader {
   @include span-columns(12);
+  padding-bottom: 10px;
+  border-bottom: 1px solid silver;
 }
 
 .findarepo {
@@ -207,14 +403,20 @@ span > i {
   @include omega();
   margin-right: 5px;
   height: 35px;
+  color: rgba(169, 169, 188, 1);
+  border: 1px solid silver;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, .1);
   border-radius: 3px;
+  padding: 5px;
 }
 
 .searchbutt {
   @include span-columns(1.5);
   @include omega();
+  background: -webkit-linear-gradient(rgba(251, 251, 251, 1), rgba(238, 238, 238, 1));
+  border: 1px solid rgba(221, 221, 221, 1);
   height: 35px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .repomenu {
@@ -247,14 +449,21 @@ span > i {
   @include omega();
 }
 
+.octicon-repo {
+  margin-right: 5px;
+}
+
 .newrepo {
-  @include span-columns(1.5);
+  @include span-columns(1.4);
   @include omega();
   margin-left: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
   height: 35px;
-  background-color: rgba(134, 217, 106, 1);
+  border: 1px solid rgba(90, 169, 81, 1);
+  background: -webkit-linear-gradient(rgba(135, 220, 123, 1), rgba(94, 176, 84, 1));
   color: rgba(255, 255, 255, 1);
+  font-size: 15px;
+  text-shadow: 0 -2px 2px rgba(103, 176, 93, 1);
 }
 
 .repobox {
@@ -276,14 +485,27 @@ span > i {
 .repotitle {
   @include span-columns(12);
   color: rgba(66, 132, 191, 1);
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 0px;
   margin-bottom: 10px;
 }
 
+.repotitle:hover {
+  text-decoration: underline;
+}
+
 .forktext {
   @include span-columns(12);
+  color: rgba(136, 136, 136, 1);
   margin-bottom: 10px;
+}
+
+.forklink {
+  color: rgba(136, 136, 136, 1);
+}
+
+.forklink:hover {
+  text-decoration: underline;
 }
 
 .update {
@@ -297,4 +519,42 @@ span > i {
 .repolanguage {
   @include shift(4 of 12);
   margin-top: 10px;
+}
+
+footer {
+  @include span-columns(12);
+  height: 100px;
+  margin-top: 30px;
+  border-top: 1px solid silver;
+  line-height: 100px;
+}
+
+.footertext {
+  @include span-columns(.8);
+}
+
+.footlink {
+  color: rgba(67, 133, 186, 1);
+}
+
+.footlink:hover {
+  text-decoration: underline;
+}
+
+.octicon-mark-github {
+  @include span-columns(1);
+  margin-top: 30px;
+  margin-left: 90px;
+  margin-right: 50px;
+  color: rgba(0, 0, 0, .2);
+}
+
+.copyright {
+  @include span-columns(1.7);
+  margin-left: 20px;
+  color: rgba(0, 0, 0, .3);
+}
+
+.api {
+  @include span-columns(.5);
 }

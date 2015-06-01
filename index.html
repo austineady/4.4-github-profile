@@ -9,57 +9,26 @@
 
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/octicons/octicons.css">
     <link rel="stylesheet" href="dist/styles/main.css">
 
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
   <section class="content">
-  <header>
-    <input type="text" class="searchbar" value="Search GitHub">
-    <span class="menutext">Explore</span>
-    <span class="menutext">Gist</span>
-    <span class="menutext">Blog</span>
-    <span class="menutext">Help</span>
-    <img src="" class="userimage">
-    <span class="username"></span>
-    <div class="menuicons"></div>
-    <div class="menuicons"></div>
-    <div class="menuicons"></div>
-    <div class="menuicons"></div>
-    <button name="login" class="login">Log In</button>
+  <header class="header">
+
   </header>
   <section class="sidebar">
-    <img src="" class="profileimage">
-    <h1 class="profilename">Austin Eady</h1>
-    <h2 class="profileusername">austineady</h2>
-    <div class="sideline"></div>
-    <div class="profileinfo">
-      <i class="fa fa-map-marker"></i><span class="country">United States</span>
-      <i class="fa fa-envelope"></i><span class="email">austineady@gmail.com</span>
-      <i class="fa fa-clock-o"></i><span class="joindate">Joined on Jan 16, 2015</span>
-    </div>
-    <div class="sideline"></div>
-    <div class="socialcontain">
-      <div class="follower socialbox">
-        <span class="followersocialnumber">0</span>
-        <span class="followersocialtext">Followers</span>
-      </div>
-      <div class="starred socialbox">
-        <span class="starredsocialnumber">0</span>
-        <span class="starredsocialtext">Starred</span>
-      </div>
-      <div class="following socialbox">
-        <span class="followingsocialnumber">0</span>
-        <span class="followingsocialtext">Following</span>
-      </div>
-    </div>
-      <div class="sideline"></div>
-      <h2 class="organizations">Organizations</h2>
-      <img src="https://avatars0.githubusercontent.com/u/11824325?v=3&s=84" class="organizepic">
+
   </section>
   <section class="maincontent">
-    <div class="mainline"></div>
+    <section class="tabcontain">
+      <button class="tabhead contributions"><span class="octicon octicon-diff-added"></span>Contributions</button>
+      <button class="tabhead repositories"><span class="octicon octicon-repo"></span>Repositories</button>
+      <button class="tabhead publicactivity"><span class="octicon octicon-rss"></span>Public Activity</button>
+      <button class="edit"><span class="octicon octicon-pencil"></span>Edit Profile</button>
+    </section>
     <section class="repoheader">
       <input type="text" class="findarepo" value="Find a repository...">
       <button class="searchbutt">Search</button>
@@ -69,26 +38,26 @@
       <span class="repomenu">Sources</span>
       <span class="repomenu forks">Forks</span>
       <span class="repomenu">Mirrors</span>
-      <button class="newrepo">New</button>
+      <button class="newrepo"><span class="octicon octicon-repo"></span>New</button>
     </section>
-    <div class="mainline"></div>
     <section class="repobox">
-      <li class="repo">
-        <div class="titlebox">
-          <h3 class="repotitle">cool-scaffolding</h3>
-          <span class="forktext">forked from jacobthemyth/cool-scaffolding</span>
-          <span class="update">Updated an hour ago</span>
-        </div>
-        <div class="languagebox">
-          <span class="repolanguage">Javascript</span>
-          <span class="starredinfo">0</span>
-          <span class="forkinfo">2</span>
-        </div>
-      </li>
+
     </section>
   </section>
-
-
+  <footer>
+    <span class="footertext copyright"><i class="fa fa-copyright"></i>2015 GitHub, Inc.</span>
+    <span class="footertext terms"><a href="https://github.com/site/terms" class="footlink">Terms</a></span>
+    <span class="footertext privacy"><a href="https://github.com/site/privacy" class="footlink">Privacy</a></span>
+    <span class="footertext security"><a href="https://github.com/security" class="footlink">Security</a></span>
+    <span class="footertext contact"><a href="https://github.com/contact" class="footlink">Contact</a></span>
+    <span class="mega-octicon octicon-mark-github"></span>
+    <span class="footertext status"><a href="https://status.github.com" class="footlink">Status</a></span>
+    <span class="footertext api"><a href="https://developer.github.com" class="footlink">API</a></span>
+    <span class="footertext training"><a href="https://training.github.com" class="footlink">Training</a></span>
+    <span class="footertext shop"><a href="https://shop.github.com" class="footlink">Shop</a></span>
+    <span class="footertext blog"><a href="https://github.com/blog" class="footlink">Blog</a></span>
+    <span class="footertext about"><a href="https://github.com/about" class="footlink">About</a></span>
+  </footer>
   </section>
   <!-- Third Party Scripts -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
